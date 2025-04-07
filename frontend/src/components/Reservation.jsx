@@ -36,7 +36,7 @@ const Reservation = () => {
       setDate("");
       navigate("/success");
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error?.response?.data?.message || "An error occurred while making the reservation");
     }
   };
 
